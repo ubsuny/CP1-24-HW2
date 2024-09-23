@@ -41,33 +41,22 @@ Also use discord for discussing solutions to any issues popping up.
 | Interaction on own project       |                |              |            |
 | Category                         | min per person | point factor | max points |
 | Commits                          | 6              | 1            | 6          |
-| Merge requests                   | 3              | 1            | 3          |
-| Merge Accepted                   | 1              | 1            | 1          |
-| Branches                         | 5              | 0.5          | 2.5        |
-| Issues                           | 10             | 0.5          | 5          |
-| Closed Issues                    | 5              | 0.2          | 1          |
-| \# Conversations                 | 25             | 0.2          | 5          |
+| Merge requests                   | 4              | 1            | 4          |
+| Merge Accepted                   | 2              | 1            | 2          |
+| Review PR                        | 1              | 2            | 2          |
+| Issues                           | 6              | 0.5          | 3          |
+| Closed Issues                    | 3              | 0.5          | 3          |
+| \# Conversations                 | 25             | $\frac 1 5$  | 5          |
 |                                  |                |              |            |
-| Total                            |                |              | 23.5       |
+| Total                            |                |              | 25         |
 |                                  |                |              |            |
 | Shared project points            |                |              |            |
-| \# Label                         | 10             | 0.2          | 2          |
-| \# Milestones                    | 2              | 1            | 2          |
+| \# Milestones                    | 18             | $\frac 1 6$  | 3          |
 | \# Tags                          | 0              | 1            | 0          |
 |                                  |                |              |            |
-| Total                            | 10             |              | 4          |
-|                                  |                |              |            |
-|                                  |                |              |            |
-| Interaction on others project(s) |                |              |            |
-| Category                         | min per person | point factor | max points |
-| Commits                          | 3              | 1            | 3          |
-| Branches                         | 1              | 0.5          | 0.5        |
-| Issues                           | 6              | 0.5          | 3          |
-| \# Conversations                 | 15             | 0.2          | 3          |
-|                                  |                |              |            |
-| Total                            | 22             |              | 9.5        |
+| Total                            |                |              | 3          |
 |                                  |                |              |            |
 | Result                           |                |              |            |
-| Task completion                  | 5              | 1            | 5          |
+| Task completion                  | 5              | 1            | 14         |
 |                                  |                |              |            |
 | Sum                              |                |              | 42         |
