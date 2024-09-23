@@ -40,14 +40,14 @@ Also use discord for discussing solutions to any issues popping up.
 | Interaction on own project       |                |              |            |
 | Category                         | min per person | point factor | max points |
 | Commits                          | 6              | 1            | 6          |
-| Merge requests                   | 4              | 1            | 4          |
-| Merge Accepted                   | 2              | 1            | 2          |
+| Pull requests                    | 4              | 1            | 4          |
+| PR Accepted                      | 2              | 1            | 2          |
 | Review PR                        | 1              | 2            | 2          |
 | Issues                           | 6              | 0.5          | 3          |
-| Closed Issues                    | 3              | 0.5          | 3          |
+| Closed Issues                    | 3              | 0.5          | 1.5        |
 | \# Conversations                 | 25             | $\frac 1 5$  | 5          |
 |                                  |                |              |            |
-| Total                            |                |              | 25         |
+| Total                            |                |              | 23.5       |
 |                                  |                |              |            |
 | Shared project points            |                |              |            |
 | \# Milestones                    | 18             | $\frac 1 6$  | 3          |
@@ -56,6 +56,6 @@ Also use discord for discussing solutions to any issues popping up.
 | Total                            |                |              | 3          |
 |                                  |                |              |            |
 | Result                           |                |              |            |
-| Task completion                  | 5              | 1            | 14         |
+| Task completion                  | 15.5           | 1            | 15.5       |
 |                                  |                |              |            |
 | Sum                              |                |              | 42         |
