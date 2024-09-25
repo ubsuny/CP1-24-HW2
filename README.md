@@ -21,7 +21,8 @@ For this you have to complete the following steps:
 - Discuss and generate milestones for your project to optimize the timeline of your project.
 - Fork this repository
 - Generate the necessary files for your task and commit them. Commmit not just the final result but also intermediate steps. (Think of it like saving the file. Everytime you save, commit)
-- create pull requests for your work
+- Create pull requests for your work
+- During the project everyone will be assigned a PR to review.
 
 Also use discord for discussing solutions to any issues popping up.
 
