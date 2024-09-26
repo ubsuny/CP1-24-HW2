@@ -6,18 +6,18 @@ import numpy as np
 # Implement operation 2: get_diagonal()
 # Function to return the diagonal elements of an array
 # TODO: unit testing and exception handling
-def get_diagonal(arr):
+def get_diagonal(matrix):
     """
     Returns the diagonal elements of a matrix using the numpy diagonal() method.
 
     Parameters:
-    arr (ndarray): Input array (2D matrix)
+    matrix (ndarray): Input array (2D matrix)
 
     Returns:
     ndarray: Digonal elements of the matrix
     """
     # use the included np method for computing a matrix diagonal
-    return np.diagonal(arr) # could attempt to optimize this to try and beat np..
+    return np.diagonal(matrix) # could attempt to optimize this to try and beat np..
 
 
 # TODO: Implement operation 2: axis_summation()
