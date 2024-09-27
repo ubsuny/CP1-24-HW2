@@ -14,7 +14,7 @@ def get_diagonal(matrix):
     matrix (ndarray): Input array (2D matrix)
 
     Returns:
-    ndarray: Digonal elements of the matrix
+    ndarray: Diagonal elements of the matrix
     """
     # use the included np method for computing a matrix diagonal
     return np.diagonal(matrix) # could attempt to optimize this to try and beat np..
