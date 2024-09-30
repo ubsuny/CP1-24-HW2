@@ -13,7 +13,7 @@
    - **iglesias-cardinale**
 4. Transpositions and permutations
 
-   -
+   - **jkblc**
 5. Matrix multiplication and dot product
 
    - **ojha-aditya**
