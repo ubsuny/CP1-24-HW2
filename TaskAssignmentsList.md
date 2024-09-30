@@ -10,7 +10,7 @@
    - **avgagliardo**
 3. Array axis summations
 
-   - 
+   - **iglesias-cardinale**
 4. Transpositions and permutations
 
    -
