@@ -11,6 +11,7 @@
 3. Array axis summations
 
    - **iglesias-cardinale**
+   - **p_pxmpo**
 4. Transpositions and permutations
 
    - **jkblc**
