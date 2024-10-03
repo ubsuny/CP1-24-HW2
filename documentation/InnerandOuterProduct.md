@@ -21,5 +21,10 @@ $\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}$
 Expanded Form:
 $C = a \times b = a_i b_j$
 
-
+\begin{bmatrix}
+ a_1 b_1 & a_1 b_2  & ... & a_1 b_n\\
+ a_2 b_1 & a_2 b_2 & ...  & a_2 b_n \\
+ ...& ... & ... &  ...\\
+ a_n b_1& a_n b_2 & ... & a_n b_n \\
+\end{bmatrix} 
 
