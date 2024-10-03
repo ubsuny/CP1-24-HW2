@@ -28,3 +28,4 @@ $\begin{bmatrix}
  a_n b_1& a_n b_2 & ... & a_n b_n \\
 \end{bmatrix}$
 
+\displaystyle{C}=\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}={\left[\begin{matrix}{a}^{1}{b}^{1}&{a}^{1}{b}^{2}&\ldots&{a}^{1}{b}^{n}\\{a}^{2}{b}^{1}&{a}^{2}{b}^{2}&\ldots&{a}^{2}{b}^{n}\\\ldots&\ldots&\ldots&\ldots\\\ldots&\ldots&\ldots&\ldots\\{a}^{n}{b}^{1}&{a}^{n}{b}^{2}&\ldots&{a}^{n}{b}^{n}\end{matrix}\right]}
