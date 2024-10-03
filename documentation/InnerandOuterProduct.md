@@ -19,6 +19,14 @@ In Einstein notation, this can be written as:
 $\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}$
 
 Expanded Form:
-$\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}={\left[\begin{matrix}{a}^{1}{b}^{1}&{a}^{1}{b}^{2}&\ldots&{a}^{1}{b}^{n}\\{a}^{2}{b}^{1}&{a}^{2}{b}^{2}&\ldots&{a}^{2}{b}^{n}\\\ldots&\ldots&\ldots&\ldots\\\ldots&\ldots&\ldots&\ldots\\{a}^{n}{b}^{1}&{a}^{n}{b}^{2}&\ldots&{a}^{n}{b}^{n}\end{matrix}\right]}$
-${C}=\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}={\left[\begin{matrix}{a}^{1}{b}^{1}&{a}^{1}{b}^{2}&\ldots&{a}^{1}{b}^{n}\\{a}^{2}{b}^{1}&{a}^{2}{b}^{2}&\ldots&{a}^{2}{b}^{n}\\\ldots&\ldots&\ldots&\ldots\\\ldots&\ldots&\ldots&\ldots\\{a}^{n}{b}^{1}&{a}^{n}{b}^{2}&\ldots&{a}^{n}{b}^{n}\end{matrix}\right]}$
-$$\{C}=\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}={\left[\begin{matrix}{a}^{1}{b}^{1}&{a}^{1}{b}^{2}&\ldots&{a}^{1}{b}^{n}\\{a}^{2}{b}^{1}&{a}^{2}{b}^{2}&\ldots&{a}^{2}{b}^{n}\\\ldots&\ldots&\ldots&\ldots\\\ldots&\ldots&\ldots&\ldots\\{a}^{n}{b}^{1}&{a}^{n}{b}^{2}&\ldots&{a}^{n}{b}^{n}\end{matrix}\right]}$$
+\[
+C = a \times b = a_i b_j = 
+\begin{pmatrix}
+a_1 b_1 & a_1 b_2 & \cdots & a_1 b_n \\
+a_2 b_1 & a_2 b_2 & \cdots & a_2 b_n \\
+\vdots & \vdots & \ddots & \vdots \\
+a_m b_1 & a_m b_2 & \cdots & a_m b_n \\
+\end{pmatrix}
+\]
+
+
