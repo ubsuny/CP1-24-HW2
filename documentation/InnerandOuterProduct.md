@@ -1,8 +1,8 @@
 # Documentation
 ## Inner Product:
 
-For two vectors $$\displaystyle\vec{{a}}$$ and $$\displaystyle\vec{{b}}$$ in n-dimensional space, the inner product is defined as :
-$$\displaystyle\vec{{a}}\cdot\vec{{b}}={\sum_{{{i}={1}}}^{{n}}}{a}_{{i}}{b}_{{i}}$$
+For two vectors $\vec{{a}}$ and $\vec{{b}}$$ in n-dimensional space, the inner product is defined as :
+$$\vec{{a}}\cdot\vec{{b}}={\sum_{{{i}={1}}}^{{n}}}{a}_{{i}}{b}_{{i}}$$
 
 In Einstein notation, this can be written as:
 $\displaystyle\vec{{a}}\cdot\vec{{b}}={a}_{{i}}{b}^{i}$
