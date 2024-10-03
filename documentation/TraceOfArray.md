@@ -6,13 +6,13 @@ The trace of a matrix is an important matrix operation used in various applicati
 In this project, we implement the trace operation using Einstein notation, which allows for a concise and efficient representation of the operation. Einstein notation, or the Einstein summation convention, simplifies tensor operations by assuming summation over repeated indices, making it especially useful for operations like the trace of an array.
 
 ## **Trace of a Matrix**
-For a square matrix A, the trace is the sum of its diagonal elements:
+For a square matrix `A`, the trace is the sum of its diagonal elements:
 
-Tr(A) = sum(A_ii) for i in {1, 2, ..., n}
+`Tr(A) = sum(A_ii)` for `i in {1, 2, ..., n}`
 
 Using Einstein notation, this summation over the diagonal elements is implicit:
 
-Tr(A) = A_ii
+`Tr(A) = A_ii`
 
 This notation reduces complexity in expressing operations and is efficient for computation using libraries such as NumPy.
 
