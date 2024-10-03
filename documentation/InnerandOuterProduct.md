@@ -2,7 +2,7 @@
 ## Inner Product:
 
 For two vectors $\vec{{a}}$ and $\vec{{b}}$ in n-dimensional space, the inner product is defined as :
-$\vec{{a}}\cdot\vec{{b}}={\sum_{{{i}={1}}}^{{n}}}{a}_{{i}}{b}_{{i}}$
+$\vec{{a}}\dot\vec{{b}}={\sum_{{{i}={1}}}^{{n}}}{a}_{{i}}{b}_{{i}}$
 
 In Einstein notation, this can be written as:
 $\vec{{a}}\cdot\vec{{b}}={a}_{{i}}{b}^{i}$
