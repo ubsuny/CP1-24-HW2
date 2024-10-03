@@ -2,7 +2,7 @@
 ## Inner Product:
 
 For two vectors $\vec{{a}}$ and $\vec{{b}}$ in n-dimensional space, the inner product is defined as :
-$\vec{{a}}\dot\vec{{b}}={\sum_{{{i}={1}}}^{{n}}}{a}_{{i}}{b}_{{i}}$
+$\vec{{a}}\cdot\vec{{b}}={\sum_{{{i}={1}}}^{{n}}}{a}_{{i}}{b}_{{i}}$
 
 In Einstein notation, this can be written as:
 $\vec{{a}}\cdot\vec{{b}}={a}_{{i}}{b}^{i}$
@@ -19,5 +19,5 @@ In Einstein notation, this can be written as:
 $\displaystyle\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}$
 
 Expanded Form:
-${C}=\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}={\left[\begin{matrix}{a}^{1}{b}^{1}&{a}^{1}{b}^{2}&\ldots&{a}^{1}{b}^{n}\\{a}^{2}{b}^{1}&{a}^{2}{b}^{2}&\ldots&{a}^{2}{b}^{n}\\\ldots&\ldots&\ldots&\ldots\\\ldots&\ldots&\ldots&\ldots\\{a}^{n}{b}^{1}&{a}^{n}{b}^{2}&\ldots&{a}^{n}{b}^{n}\end{matrix}\right]}$
+$\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}={\left[\begin{matrix}{a}^{1}{b}^{1}&{a}^{1}{b}^{2}&\ldots&{a}^{1}{b}^{n}\\{a}^{2}{b}^{1}&{a}^{2}{b}^{2}&\ldots&{a}^{2}{b}^{n}\\\ldots&\ldots&\ldots&\ldots\\\ldots&\ldots&\ldots&\ldots\\{a}^{n}{b}^{1}&{a}^{n}{b}^{2}&\ldots&{a}^{n}{b}^{n}\end{matrix}\right]}$
 ${C}=\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}={\left[\begin{matrix}{a}^{1}{b}^{1}&{a}^{1}{b}^{2}&\ldots&{a}^{1}{b}^{n}\\{a}^{2}{b}^{1}&{a}^{2}{b}^{2}&\ldots&{a}^{2}{b}^{n}\\\ldots&\ldots&\ldots&\ldots\\\ldots&\ldots&\ldots&\ldots\\{a}^{n}{b}^{1}&{a}^{n}{b}^{2}&\ldots&{a}^{n}{b}^{n}\end{matrix}\right]}$
