@@ -19,14 +19,7 @@ In Einstein notation, this can be written as:
 $\vec{{a}}\times\vec{{b}}={a}^{i}{b}^{i}$
 
 Expanded Form:
-$$
-C = a \times b = a_i b_j = 
-\begin{pmatrix}
-a_1 b_1 & a_1 b_2 & \cdots & a_1 b_n \\
-a_2 b_1 & a_2 b_2 & \cdots & a_2 b_n \\
-\vdots & \vdots & \ddots & \vdots \\
-a_m b_1 & a_m b_2 & \cdots & a_m b_n \\
-\end{pmatrix}
-$$
+$C = a \times b = a_i b_j$
+
 
 
