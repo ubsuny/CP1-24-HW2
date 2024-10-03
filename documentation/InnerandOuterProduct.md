@@ -1,10 +1,10 @@
 # Documentation
 ## Inner Product:
-\nFor two vectors $\displaystyle\vec{{a}}$ and $\displaystyle\vec{{b}}$ in n-dimensional space, the inner product is defined as :
+For two vectors $\displaystyle\vec{{a}}$ and $\displaystyle\vec{{b}}$ in n-dimensional space, the inner product is defined as :
 $\displaystyle\vec{{a}}\cdot\vec{{b}}={\sum_{{{i}={1}}}^{{n}}}{a}_{{i}}{b}_{{i}}$
-\nIn Einstein notation, this can be written as:
+In Einstein notation, this can be written as:
 $\displaystyle\vec{{a}}\cdot\vec{{b}}={a}_{{i}}{b}^{i}$
-\nExpanded Form:  
+Expanded Form:  
 $\displaystyle{C}=\vec{{a}}\cdot\vec{{b}}={a}_{{i}}{b}^{i}={a}_{{1}}{b}^{1}+{a}_{{2}}{b}^{2}+\ldots..+{a}_{{n}}{b}^{n}$
 ## Outer Product: 
 For two vectors a and b, the outer product results in a matrix:
