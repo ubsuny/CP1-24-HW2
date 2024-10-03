@@ -1,14 +1,14 @@
 # Documentation
 ## Inner Product:
 
-For two vectors $\vec{{a}}$ and $\vec{{b}}$$ in n-dimensional space, the inner product is defined as :
-$$\vec{{a}}\cdot\vec{{b}}={\sum_{{{i}={1}}}^{{n}}}{a}_{{i}}{b}_{{i}}$$
+For two vectors $\vec{{a}}$ and $\vec{{b}}$ in n-dimensional space, the inner product is defined as :
+$\vec{{a}}\cdot\vec{{b}}={\sum_{{{i}={1}}}^{{n}}}{a}_{{i}}{b}_{{i}}$
 
 In Einstein notation, this can be written as:
-$\displaystyle\vec{{a}}\cdot\vec{{b}}={a}_{{i}}{b}^{i}$
+$\vec{{a}}\cdot\vec{{b}}={a}_{{i}}{b}^{i}$
 
 Expanded Form:  
-$\displaystyle{C}=\vec{{a}}\cdot\vec{{b}}={a}_{{i}}{b}^{i}={a}_{{1}}{b}^{1}+{a}_{{2}}{b}^{2}+\ldots..+{a}_{{n}}{b}^{n}$
+$\{C}=\vec{{a}}\cdot\vec{{b}}={a}_{{i}}{b}^{i}={a}_{{1}}{b}^{1}+{a}_{{2}}{b}^{2}+\ldots..+{a}_{{n}}{b}^{n}$
 
 ## Outer Product: 
 
