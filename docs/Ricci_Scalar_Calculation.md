@@ -64,11 +64,11 @@ The comparison of execution times between NumPy's `einsum` and Opt-Einsum highli
 
 Opt-Einsum's optimizations can lead to faster calculations and reduced computational resources, making it an essential tool for anyone working with tensor contractions in scientific computing.
 
-###### **Explanation of code**
+###### Explanation of code
 
-import numpy as np
-import opt_einsum as oe
-import timeit
+      import numpy as np
+      import opt_einsum as oe
+      import timeit
 
 The above are the neccessary libraries and packagaes. numpy is a fundamental package for numerical computing in Python. The contraction and taking inverse of tensors are being done using numpy. opt_einsum is an optimized version of numpy.einsum, used to perform Einstein summation with improved performance, especially on larger tensors. And timeit is a Python module that measures the execution time. This is used here to compare the execution time of both methods of calculating Ricci scalar.
 
