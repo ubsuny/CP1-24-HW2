@@ -107,3 +107,9 @@ print("The best time taken to multiply the second array by the scalar is roughly
 # Array Multiplication test
 print(arrayMultiplication1(arr1,arr2))
 print("The best time taken to multiply the first array by the second array is roughly: ", tm.timeit(lambda: arrayMultiplication1(arr1,arr2), number = 1000), " sec")
+
+"""
+1. There's no problem with the multiplication of an array by a scalar
+2. Not all the arrays can be broadcasted to match each other
+"""
+# TODO: An exception handling is needed to deal with the "unmatchable" scenarios
