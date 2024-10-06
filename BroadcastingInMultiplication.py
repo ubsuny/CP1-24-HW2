@@ -90,3 +90,20 @@ def arrayMultiplication3(arr1, arr2):
 
     result = np.einsum(arr2, [Ellipsis], arr1, [Ellipsis])
     return result
+
+# testing
+arr1 = np.array([7, 8, 9])
+arr2 = np.array([[1,2,3],
+                 [4,5,6],
+                 [7,8,9]])
+scalar = 6.0
+# Scalar Multiplication test
+print(scalarMultiplication1(arr1,scalar))
+print("The best time taken to multiply the first array by the scalar is roughly: ", tm.timeit(lambda: scalarMultiplication1(arr1,scalar), number = 1000), " sec")
+
+print(scalarMultiplication1(arr2,scalar))
+print("The best time taken to multiply the second array by the scalar is roughly: ", tm.timeit(lambda: scalarMultiplication1(arr2,scalar), number = 1000), " sec")
+
+# Array Multiplication test
+print(arrayMultiplication1(arr1,arr2))
+print("The best time taken to multiply the first array by the second array is roughly: ", tm.timeit(lambda: arrayMultiplication1(arr1,arr2), number = 1000), " sec")
