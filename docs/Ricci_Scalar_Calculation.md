@@ -12,7 +12,7 @@ The Ricci scalar is a key quantity in General Relativity, representing the avera
    R_{\mu \nu} = R^\lambda_{\mu \lambda \nu}
    $$
 
-3. **Ricci Scalar Calculation:**
+3. Ricci Scalar Calculation:
    The Ricci scalar is computed by contracting the Ricci tensor with the inverse metric tensor:
 
    $$
