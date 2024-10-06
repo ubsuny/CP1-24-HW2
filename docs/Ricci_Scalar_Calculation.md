@@ -74,7 +74,6 @@ The above are the neccessary libraries and packagaes. numpy is a fundamental pac
 
 
 def calculate_ricci_scalar_numpy(g, R):
-    """
     Calculate the Ricci scalar using NumPy's einsum function.
     
     Parameters:
@@ -89,9 +88,8 @@ Starting from the beginning I give two inputs; the metric tensor 'g' and the Ric
 np.einsum() is used to perform tensor contraction using Einstein notation. The function returns the Ricci scalar. 
 
 def calculate_ricci_scalar_opt_einsum(g, R):
-    """
+
     Calculate the Ricci scalar using Opt-Einsum with an optimized contraction path.
-    
     optimized_path, _ = oe.contract_path('ij,ij->', g_inv, R)
     ricci_scalar = oe.contract('ij,ij->', g_inv, R, optimize=optimized_path)
     return ricci_scalar
