@@ -29,3 +29,15 @@ def scalarMultiplication2(arr, scalar = 0.0):
     for i in range(len(arr)):
         result.append(arr[i]*scalar)
     return result
+
+# using np.einsum
+def scalarMultiplication3(arr, scalar = 0.0):
+    """
+    Returns the multipliction of an array by a scalar.
+    Parameters:
+    arr (ndarray): Input array
+    Returns:
+    ndarray: The result of multiplying the scalar with each element of the array
+    """
+    result = np.einsum(',...', scalar, arr)
+    return result
