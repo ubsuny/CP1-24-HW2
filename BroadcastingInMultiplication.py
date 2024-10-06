@@ -77,3 +77,16 @@ def arrayMultiplication2(arr1, arr2):
     for i in range(len(arr1)):
         result.append(arr1[i]*arr2) # that's normal broadcasting directly multiplying a scalar by an array, which means it can be optimized
     return result
+
+# using np.einsum
+def arrayMultiplication3(arr1, arr2):
+    """
+    Returns the element-wise multipliction of two arrays.
+    Parameters:
+    arr1 (ndarray), arr2 (ndarray): Input arrays
+    Returns:
+    ndarray: An array of the elements that each of them result from multiplying an element from the first array by an element from the second array
+    """
+
+    result = np.einsum(arr2, [Ellipsis], arr1, [Ellipsis])
+    return result
