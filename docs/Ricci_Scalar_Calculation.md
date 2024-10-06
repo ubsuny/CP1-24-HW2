@@ -15,10 +15,6 @@ The Ricci scalar is a key quantity in General Relativity, representing the avera
 3. Ricci Scalar Calculation:
    The Ricci scalar is computed by contracting the Ricci tensor with the inverse metric tensor:
 
-   $$
-   R = g^{\mu \nu} R_{\mu \nu}
-   $$
-
 ### Comparison of Execution Times for Ricci Scalar Calculation and the Explanation of code which compares the execution time of two different methods for calculating the Ricci scalar using tensor contraction in Python.
 
 #### Overview
