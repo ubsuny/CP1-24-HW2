@@ -64,7 +64,7 @@ The comparison of execution times between NumPy's `einsum` and Opt-Einsum highli
 
 Opt-Einsum's optimizations can lead to faster calculations and reduced computational resources, making it an essential tool for anyone working with tensor contractions in scientific computing.
 
-###### Explanation of code
+##### **Explanation of code**
 
       import numpy as np
       import opt_einsum as oe
