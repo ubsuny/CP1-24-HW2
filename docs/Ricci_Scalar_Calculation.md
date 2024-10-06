@@ -128,8 +128,8 @@ def compare_execution_times():
 
 Define Metric Tensor (flat spacetime metric) and Ricci tensor (with arbitraty values). The timeit() function is used to measure the execution time of the two methods over 1000 iterations. NumPy einsum Time measures how long it takes to calculate the Ricci scalar using np.einsum(). Opt-Einsum Time measures the time taken using opt_einsum with the optimized contraction path. The code compares the execution times of the two methods and prints which one is faster.
 
-if __name__ == "__main__":
-    compare_execution_times()
+    if __name__ == "__main__":
+         compare_execution_times()
 
 This ensures that the compare_execution_times() function runs only when the script is executed directly.
 
