@@ -146,3 +146,13 @@ maxMatSize = 100 # maximum matrix size
 randMs1 = [randMat(n+2) for n in range(maxMatSize)] # first set of random matrices
 randMs2 = [randMat(n+2) for n in range(maxMatSize)] # second set of random matrices
 matSizes = [(n + 2) for n in range(maxMatSize)] # an ordered list of the sizes of the generated matrices
+
+# Recordinging the excution times for the different implementations of multiplying a matrix by a scalar
+# Default-Broadcasting Times for Scalar multiplication
+dBts = [tm.timeit(lambda: scalarMultiplication1(M, randScalar), number = 1000) for M in randMs1]
+
+# For-loop-Broadcasting Times for Scalar multiplication
+fBts = [tm.timeit(lambda: scalarMultiplication2(M, randScalar), number = 1000) for M in randMs1]
+
+# Einsum-Broadcasting Times for Scalar multiplication
+eBts = [tm.timeit(lambda: scalarMultiplication3(M, randScalar), number = 1000) for M in randMs1]
