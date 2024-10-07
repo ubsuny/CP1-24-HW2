@@ -177,7 +177,7 @@ def exp_func(x, a, b):
     return a * np.exp(b * x)
 
 # Defining the function that takes the data as an input, plots, curve-fits, and returns the optimized parameters
-def plotData(x = [], y = [], TITLE = "Exponential Fit of Data"):
+def plotData(x = [], y = [], xlable = "x", ylable = "y", TITLE = "Exponential Fit of Data"):
     # input data (x and y values)
     x_data = x
     y_data = y
@@ -200,8 +200,8 @@ def plotData(x = [], y = [], TITLE = "Exponential Fit of Data"):
     plt.plot(x_data, y_fitted, label=f"Fitted Curve: $y = a \\cdot e^{{b \\cdot x}}$, $a = {a_opt:.2f}, b = {b_opt:.2f}$", color="blue", linewidth=2)  # Plot the fitted curve
 
     # Add labels and title
-    plt.xlabel("x")
-    plt.ylabel("y")
+    plt.xlabel(xlable)
+    plt.ylabel(ylable)
     plt.title(TITLE)
     plt.legend()
 
