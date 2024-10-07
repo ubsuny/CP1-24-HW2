@@ -1,5 +1,8 @@
 import numpy as np
 import timeit as tm
+import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
+import random
 
 
 # Functions to multiply an array by a scalar and return the resulting array
@@ -141,14 +144,14 @@ def randMat(N):
 # We will limit our analysis to dealing only with two dimensoinal arrays (matrices) for consistency and intrepretability purposes (specifically, square matrices)
 
 # First, generating a random number (scalar) and two sets of random matrices for each test for reliability purposes
-randScalar = np.random.default_rng(seed=42) # random scalar
+randScalar = random.random() # random scalar
 maxMatSize = 100 # maximum matrix size
 randMs1 = [randMat(n+2) for n in range(maxMatSize)] # first set of random matrices
 randMs2 = [randMat(n+2) for n in range(maxMatSize)] # second set of random matrices
 matSizes = [(n + 2) for n in range(maxMatSize)] # an ordered list of the sizes of the generated matrices
 numMat = len(randMs1) # Number of Matrices in each set
 
-# Recordinging the excution times for the different implementations of multiplying a matrix by a scalar
+# Second, recordinging the excution times for the different implementations of multiplying a matrix by a scalar
 # Default-Broadcasting Times for Scalar multiplication
 dBts = [tm.timeit(lambda: scalarMultiplication1(M, randScalar), number = 1000) for M in randMs1]
 
@@ -158,7 +161,7 @@ fBts = [tm.timeit(lambda: scalarMultiplication2(M, randScalar), number = 1000) f
 # Einsum-Broadcasting Times for Scalar multiplication
 eBts = [tm.timeit(lambda: scalarMultiplication3(M, randScalar), number = 1000) for M in randMs1]
 
-# Recordinging the excution times for the different implementations of multiplying a matrix by a matrix
+# Third, recordinging the excution times for the different implementations of multiplying a matrix by a matrix
 # Default-Broadcasting Times for Matrix multiplication
 dBtm = [tm.timeit(lambda: arrayMultiplication1(randMs1[k], randMs2[k]), number = 1000) for k in range(numMat)]
 
@@ -167,3 +170,100 @@ fBtm = [tm.timeit(lambda: arrayMultiplication2(randMs1[k], randMs2[k]), number =
 
 # Einsum-Broadcasting Times for Matrix multiplication
 eBtm = [tm.timeit(lambda: arrayMultiplication3(randMs1[k], randMs2[k]), number = 1000) for k in range(numMat)]
+
+
+# Lastly, preparing for plotting, plotting, and curve-fitting
+# Defining the function we want to fit (it's an exponential function in this case)
+def exp_func(x, a, b):
+    """
+    Returns the value of the function a*exp(b*x).
+    Parameters:
+    x (float): The independent variable
+    a (float): The vaalue of the function at x = 0
+    b (float): The proportionality factor between the function and its instatntaneous rate of change
+    Returns:
+    float: The value of the function at x
+    """
+    return a * np.exp(b * x)
+
+# Defining the function that takes the data as an input, plots, curve-fits, and returns the optimized parameters
+def plotData(x = [], y = [], xlable = "x", ylable = "y", TITLE = "Exponential Fit of Data"):
+    """
+    Returns the optimized parameters for the fitted curve.
+    Inputs:
+    x (list): A list of values for the independent variable
+    y (list): A list of values for the dependent variable
+    xlable (string): The lable of the x-axis on the plot
+    ylable (string): The lable of the y-axis on the plot
+    TITLE (string): The title of the plot
+    Returns:
+    list: The list for the values of the optimized parameters 
+    """
+    # input data (x and y values)
+    x_data = np.array(x)  # Ensure x is a NumPy array
+    y_data = np.array(y)  # Ensure y is a NumPy array
+
+    # Perform curve fitting using scipy's curve_fit function
+    popt, pcov = curve_fit(exp_func, x_data, y_data)
+
+    # Extract the optimal values of parameters a and b
+    a_opt, b_opt = popt
+
+    # Print out the fitted parameters
+    print(f"Fitted parameters: a = {a_opt:.4f}, b = {b_opt:.4f}")
+
+    # Generate fitted y data using the fitted parameters
+    y_fitted = exp_func(x_data, a_opt, b_opt)
+
+    # Plot the original data and the fitted curve
+    plt.figure(figsize=(8, 6))
+    plt.scatter(x_data, y_data, label="Data", color="red", marker="o")  # Plot the raw data
+    plt.plot(x_data, y_fitted, label=f"Fitted Curve: $y = a \\cdot e^{{b \\cdot x}}$, $a = {a_opt:.2f}, b = {b_opt:.2f}$", color="blue", linewidth=2)  # Plot the fitted curve
+
+    # Add labels and title
+    plt.xlabel(xlable)
+    plt.ylabel(ylable)
+    plt.title(TITLE)
+    plt.legend()
+
+    # Show the plot
+    plt.grid(True)
+    plt.show()
+
+    return [a_opt, b_opt]
+
+# Now plotting the data for the different implementations of Broadcasting in multiplication
+xdata = [i for i in matSizes]
+xlable = "Square Matrix Size (N)"
+ylable = "Execution Time (s)"
+title1 = "Ececution Time vs Matrix Size for "
+
+# Direct Broadcasting in Scalar multiplication
+ydata = [i for i in dBts]
+title2 = title1 + "Direct Broadcasting in Scalar multiplication"
+dBsOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for Direct Broadcasting in Scalar multiplication
+
+# For-loop Broadcasting in Scalar multiplication
+ydata = [i for i in fBts]
+title2 = title1 + "For-loop Broadcasting in Scalar multiplication"
+fBsOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for For-loop Broadcasting in Scalar multiplication
+
+# Einsum Broadcasting in Scalar multiplication
+ydata = [i for i in eBts]
+title2 = title1 + "np.einsum Broadcasting in Scalar multiplication"
+eBsOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for Einsum Broadcasting in Scalar multiplication
+
+# Direct Broadcasting in Matrix multiplication
+ydata = [i for i in dBtm]
+title2 = title1 + "Direct Broadcasting in Matrix multiplication"
+dBmOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for Direct Broadcasting in Matrix multiplication
+
+# For-loop Broadcasting in Matrix multiplication
+ydata = [i for i in fBtm]
+title2 = title1 + "For-loop Broadcasting in Matrix multiplication"
+fBmOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for For-loop Broadcasting in Matrix multiplication
+
+# Einsum Broadcasting in Matrix multiplication
+ydata = [i for i in eBtm]
+title2 = title1 + "np.einsum Broadcasting in Matrix multiplication"
+eBmOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for Einsum Broadcasting in Matrix multiplication
