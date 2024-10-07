@@ -138,7 +138,7 @@ def randMat(N):
     return matrix
 
 # This following section is for analyzing the excution times of the different implementations of Broadcasting for different scenarios
-# We will limit our analysis to dealing only with two dimensoinal arrays (matrices) for consistency and intrepretability purposes
+# We will limit our analysis to dealing only with two dimensoinal arrays (matrices) for consistency and intrepretability purposes (specifically, square matrices)
 
 # First, generating a random number (scalar) and two sets of random matrices for each test for reliability purposes
 randScalar = np.random.default_rng(seed=42) # random scalar
@@ -146,6 +146,7 @@ maxMatSize = 100 # maximum matrix size
 randMs1 = [randMat(n+2) for n in range(maxMatSize)] # first set of random matrices
 randMs2 = [randMat(n+2) for n in range(maxMatSize)] # second set of random matrices
 matSizes = [(n + 2) for n in range(maxMatSize)] # an ordered list of the sizes of the generated matrices
+numMat = len(randMs1) # Number of Matrices in each set
 
 # Recordinging the excution times for the different implementations of multiplying a matrix by a scalar
 # Default-Broadcasting Times for Scalar multiplication
@@ -156,3 +157,13 @@ fBts = [tm.timeit(lambda: scalarMultiplication2(M, randScalar), number = 1000) f
 
 # Einsum-Broadcasting Times for Scalar multiplication
 eBts = [tm.timeit(lambda: scalarMultiplication3(M, randScalar), number = 1000) for M in randMs1]
+
+# Recordinging the excution times for the different implementations of multiplying a matrix by a matrix
+# Default-Broadcasting Times for Matrix multiplication
+dBtm = [tm.timeit(lambda: arrayMultiplication1(randMs1[k], randMs2[k]), number = 1000) for k in range(numMat)]
+
+# For-loop-Broadcasting Times for Matrix multiplication
+fBtm = [tm.timeit(lambda: arrayMultiplication2(randMs1[k], randMs2[k]), number = 1000) for k in range(numMat)]
+
+# Einsum-Broadcasting Times for Matrix multiplication
+eBtm = [tm.timeit(lambda: arrayMultiplication3(randMs1[k], randMs2[k]), number = 1000) for k in range(numMat)]
