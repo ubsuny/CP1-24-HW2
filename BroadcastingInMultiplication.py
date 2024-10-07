@@ -2,6 +2,7 @@ import numpy as np
 import timeit as tm
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
+import random
 
 
 # Functions to multiply an array by a scalar and return the resulting array
@@ -143,7 +144,7 @@ def randMat(N):
 # We will limit our analysis to dealing only with two dimensoinal arrays (matrices) for consistency and intrepretability purposes (specifically, square matrices)
 
 # First, generating a random number (scalar) and two sets of random matrices for each test for reliability purposes
-randScalar = np.random.default_rng(seed=42) # random scalar
+randScalar = random.random() # random scalar
 maxMatSize = 100 # maximum matrix size
 randMs1 = [randMat(n+2) for n in range(maxMatSize)] # first set of random matrices
 randMs2 = [randMat(n+2) for n in range(maxMatSize)] # second set of random matrices
