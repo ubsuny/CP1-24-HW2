@@ -200,8 +200,8 @@ def plotData(x = [], y = [], xlable = "x", ylable = "y", TITLE = "Exponential Fi
     list: The list for the values of the optimized parameters 
     """
     # input data (x and y values)
-    x_data = x
-    y_data = y
+    x_data = np.array(x)  # Ensure x is a NumPy array
+    y_data = np.array(y)  # Ensure y is a NumPy array
 
     # Perform curve fitting using scipy's curve_fit function
     popt, pcov = curve_fit(exp_func, x_data, y_data)
