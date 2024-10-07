@@ -57,7 +57,7 @@ The above are the neccessary libraries and packagaes. numpy is a fundamental pac
 Starting from the beginning I give two inputs; the metric tensor 'g' and the Ricci Tensor 'R'. The inverse of the metric tensor is calculated first using np.linalg.inv(). 
 np.einsum() is used to perform tensor contraction using Einstein notation. The function returns the Ricci scalar. 
 
-def calculate_ricci_scalar_opt_einsum(g, R):
+    def calculate_ricci_scalar_opt_einsum(g, R):
     
     Calculate the Ricci scalar using Opt-Einsum with an optimized contraction path.
     optimized_path, _ = oe.contract_path('ij,ij->', g_inv, R)
