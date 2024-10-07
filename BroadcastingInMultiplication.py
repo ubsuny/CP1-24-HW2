@@ -1,5 +1,7 @@
 import numpy as np
 import timeit as tm
+import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
 
 
 # Functions to multiply an array by a scalar and return the resulting array
@@ -148,7 +150,7 @@ randMs2 = [randMat(n+2) for n in range(maxMatSize)] # second set of random matri
 matSizes = [(n + 2) for n in range(maxMatSize)] # an ordered list of the sizes of the generated matrices
 numMat = len(randMs1) # Number of Matrices in each set
 
-# Recordinging the excution times for the different implementations of multiplying a matrix by a scalar
+# Second, recordinging the excution times for the different implementations of multiplying a matrix by a scalar
 # Default-Broadcasting Times for Scalar multiplication
 dBts = [tm.timeit(lambda: scalarMultiplication1(M, randScalar), number = 1000) for M in randMs1]
 
@@ -158,7 +160,7 @@ fBts = [tm.timeit(lambda: scalarMultiplication2(M, randScalar), number = 1000) f
 # Einsum-Broadcasting Times for Scalar multiplication
 eBts = [tm.timeit(lambda: scalarMultiplication3(M, randScalar), number = 1000) for M in randMs1]
 
-# Recordinging the excution times for the different implementations of multiplying a matrix by a matrix
+# Third, recordinging the excution times for the different implementations of multiplying a matrix by a matrix
 # Default-Broadcasting Times for Matrix multiplication
 dBtm = [tm.timeit(lambda: arrayMultiplication1(randMs1[k], randMs2[k]), number = 1000) for k in range(numMat)]
 
@@ -167,3 +169,6 @@ fBtm = [tm.timeit(lambda: arrayMultiplication2(randMs1[k], randMs2[k]), number =
 
 # Einsum-Broadcasting Times for Matrix multiplication
 eBtm = [tm.timeit(lambda: arrayMultiplication3(randMs1[k], randMs2[k]), number = 1000) for k in range(numMat)]
+
+
+# Lastly, preparing for plotting, plotting, and curve-fitting
