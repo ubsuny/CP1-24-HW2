@@ -231,3 +231,38 @@ def plotData(x = [], y = [], xlable = "x", ylable = "y", TITLE = "Exponential Fi
 
     return [a_opt, b_opt]
 
+# Now plotting the data for the different implementations of Broadcasting in multiplication
+xdata = [i for i in matSizes]
+xlable = "Square Matrix Size (N)"
+ylable = "Execution Time (s)"
+title1 = "Ececution Time vs Matrix Size for "
+
+# Direct Broadcasting in Scalar multiplication
+ydata = [i for i in dBts]
+title2 = title1 + "Direct Broadcasting in Scalar multiplication"
+dBsOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for Direct Broadcasting in Scalar multiplication
+
+# For-loop Broadcasting in Scalar multiplication
+ydata = [i for i in fBts]
+title2 = title1 + "For-loop Broadcasting in Scalar multiplication"
+fBsOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for For-loop Broadcasting in Scalar multiplication
+
+# Einsum Broadcasting in Scalar multiplication
+ydata = [i for i in eBts]
+title2 = title1 + "np.einsum Broadcasting in Scalar multiplication"
+eBsOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for Einsum Broadcasting in Scalar multiplication
+
+# Direct Broadcasting in Matrix multiplication
+ydata = [i for i in dBtm]
+title2 = title1 + "Direct Broadcasting in Matrix multiplication"
+dBmOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for Direct Broadcasting in Matrix multiplication
+
+# For-loop Broadcasting in Matrix multiplication
+ydata = [i for i in fBtm]
+title2 = title1 + "For-loop Broadcasting in Matrix multiplication"
+fBmOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for For-loop Broadcasting in Matrix multiplication
+
+# Einsum Broadcasting in Matrix multiplication
+ydata = [i for i in eBtm]
+title2 = title1 + "np.einsum Broadcasting in Matrix multiplication"
+eBmOpt = plotData(xdata, ydata, xlable, ylable, title2) # The Optimized parameters of the curvefitting process for Einsum Broadcasting in Matrix multiplication
