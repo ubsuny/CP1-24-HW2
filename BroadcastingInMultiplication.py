@@ -53,9 +53,19 @@ def arrayMultiplication1(arr1, arr2):
     Returns:
     ndarray: An array of the elements that each of them result from multiplying an element from the first array by an element from the second array
     """
+    # Exception Handling (for when the two arrays cannot be matched in shape)
+    try:
+        broadcast_shape = np.broadcast_shapes(arr1.shape, arr2.shape)
+        # If the shapes are compatible, NumPy will return the resulting broadcast shape. If not, it will raise a ValueError.
+        # print("Broadcastable to shape:", broadcast_shape) [this is not needed]
+    except ValueError as e:
+        errmsg = "Incompatible shapes: " + str(e)
+        return errmsg
+
+    result = np.einsum(arr2, [Ellipsis], arr1, [Ellipsis])
+    return result
 
     broadcasted_arr2 = np.broadcast_to(arr1,arr2.shape)
-
 
     result = arr1 * broadcasted_arr2 # instead of arr2
     return result
@@ -87,6 +97,14 @@ def arrayMultiplication3(arr1, arr2):
     Returns:
     ndarray: An array of the elements that each of them result from multiplying an element from the first array by an element from the second array
     """
+    # Exception Handling (for when the two arrays cannot be matched in shape)
+    try:
+        broadcast_shape = np.broadcast_shapes(arr1.shape, arr2.shape)
+        # If the shapes are compatible, NumPy will return the resulting broadcast shape. If not, it will raise a ValueError.
+        # print("Broadcastable to shape:", broadcast_shape) [this is not needed]
+    except ValueError as e:
+        errmsg = "Incompatible shapes: " + str(e)
+        return errmsg
 
     result = np.einsum(arr2, [Ellipsis], arr1, [Ellipsis])
     return result
@@ -108,8 +126,3 @@ print("The best time taken to multiply the second array by the scalar is roughly
 print(arrayMultiplication1(arr1,arr2))
 print("The best time taken to multiply the first array by the second array is roughly: ", tm.timeit(lambda: arrayMultiplication1(arr1,arr2), number = 1000), " sec")
 
-"""
-1. There's no problem with the multiplication of an array by a scalar
-2. Not all the arrays can be broadcasted to match each other
-"""
-# TODO: An exception handling is needed to deal with the "unmatchable" scenarios
