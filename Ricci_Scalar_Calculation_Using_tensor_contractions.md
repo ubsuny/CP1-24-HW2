@@ -34,8 +34,7 @@ Both methods were tested on a sample metric tensor which represents a flat space
 
 ##### **Conclusion**
 
-The comparison of execution times between NumPy's `einsum` and Opt-Einsum highlights the crucial role of optimization in tensor calculations. While NumPy’s `einsum` provides a straightforward approach, Opt-Einsum’s ability to determine and use the most efficient contraction path offers substantial performance improvements. This is particularly valuable in fields like physics, machine learning, and other areas requiring large-scale tensor computations.
-Opt-Einsum's optimizations can lead to faster calculations and reduced computational resources, making it an essential tool for anyone working with tensor contractions in scientific computing.
+The comparison of execution times between NumPy's `einsum` and Opt-Einsum describes the importance of optimization in tensor calculations. Opt-Einsum's path optimization approach is efficient in handling complex computation fast, while NumPy's `einsum` describes a straight approach. This is particularly valuable in fields like physics, machine learning, and other areas requiring large-scale tensor computations. Opt-Einsum's optimizations can lead to faster calculations and reduced computational resources.
 
 ##### **Explanation of code**
 
