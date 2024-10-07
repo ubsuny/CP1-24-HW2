@@ -174,10 +174,30 @@ eBtm = [tm.timeit(lambda: arrayMultiplication3(randMs1[k], randMs2[k]), number =
 # Lastly, preparing for plotting, plotting, and curve-fitting
 # Defining the function we want to fit (it's an exponential function in this case)
 def exp_func(x, a, b):
+    """
+    Returns the value of the function a*exp(b*x).
+    Parameters:
+    x (float): The independent variable
+    a (float): The vaalue of the function at x = 0
+    b (float): The proportionality factor between the function and its instatntaneous rate of change
+    Returns:
+    float: The value of the function at x
+    """
     return a * np.exp(b * x)
 
 # Defining the function that takes the data as an input, plots, curve-fits, and returns the optimized parameters
 def plotData(x = [], y = [], xlable = "x", ylable = "y", TITLE = "Exponential Fit of Data"):
+    """
+    Returns the optimized parameters for the fitted curve.
+    Inputs:
+    x (list): A list of values for the independent variable
+    y (list): A list of values for the dependent variable
+    xlable (string): The lable of the x-axis on the plot
+    ylable (string): The lable of the y-axis on the plot
+    TITLE (string): The title of the plot
+    Returns:
+    list: The list for the values of the optimized parameters 
+    """
     # input data (x and y values)
     x_data = x
     y_data = y
