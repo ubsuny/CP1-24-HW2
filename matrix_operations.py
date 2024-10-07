@@ -155,8 +155,28 @@ def get_diagonal_numpy(matrix):
 # Computes the summation along specified axes
 
 
-# TODO: Implement operation 3: transpose_array()
 # Performs the transposition of an array
+def get_transpose(matrix):
+    """
+    Retruns the transpose of the given matrix usning the numpy transpose() method
+
+    Parameters:
+    
+    a : array_like
+        Input array.
+
+    axes : tuple or list of ints, optional
+        If specified, it must be a tuple or list which contains a permutation of [0,1,…,N-1] where N is the number of axes of a. 
+        The i’th axis of the returned array will correspond to the axis numbered axes[i] of the input. 
+        If not specified, defaults to range(a.ndim)[::-1], which reverses the order of the axes.
+
+    Returns:
+
+    p : ndarray
+        a with its axes permuted. A view is returned whenever possible.
+    """
+    # uses the numpy method to return the transpose of a matrix
+    return np.transpose(matrix)
 
 
 # TODO: Implement operation 4: purmute_axes()
