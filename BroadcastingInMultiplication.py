@@ -137,3 +137,12 @@ def randMat(N):
     
     return matrix
 
+# This following section is for analyzing the excution times of the different implementations of Broadcasting for different scenarios
+# We will limit our analysis to dealing only with two dimensoinal arrays (matrices) for consistency and intrepretability purposes
+
+# First, generating a random number (scalar) and two sets of random matrices for each test for reliability purposes
+randScalar = np.random.default_rng(seed=42) # random scalar
+maxMatSize = 100 # maximum matrix size
+randMs1 = [randMat(n+2) for n in range(maxMatSize)] # first set of random matrices
+randMs2 = [randMat(n+2) for n in range(maxMatSize)] # second set of random matrices
+matSizes = [(n + 2) for n in range(maxMatSize)] # an ordered list of the sizes of the generated matrices
