@@ -22,6 +22,7 @@
 6. Vector inner and outer products
 
     - **abruns123**
+    - **Priyanka-43**
 7. Broadcasting, element-wise and scalar multiplication
 
     - **HeshamElsaman**
