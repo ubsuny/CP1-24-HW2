@@ -3,7 +3,7 @@
 
 The inner product is a mathematical operation that takes two vectors and returns a scalar. It generalizes the concept of the dot product from Euclidean space to more abstract vector spaces.
 For two vectors $\vec{{a}}$ and $\vec{{b}}$ in n-dimensional space, the inner product is defined as :
-$\displaystyle\vec{{a}}.\vec{{b}}={a}_{{1}}{b}_{{1}}+{a}_{{2}}{b}_{{2}}+{a}_{{3}}{b}_{{3}}\ldots+{a}_{{n}}{b}_{{n}}$
+$\vec a \cdot\vec b = \sum_i= 1^n a_i b_i$
 
 In Einstein notation, this can be written as:
 $\vec{{a}}\cdot\vec{{b}}={a}_{{i}}{b}^{i}$
