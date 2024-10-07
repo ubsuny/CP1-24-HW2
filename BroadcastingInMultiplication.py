@@ -172,3 +172,42 @@ eBtm = [tm.timeit(lambda: arrayMultiplication3(randMs1[k], randMs2[k]), number =
 
 
 # Lastly, preparing for plotting, plotting, and curve-fitting
+# Defining the function we want to fit (it's an exponential function in this case)
+def exp_func(x, a, b):
+    return a * np.exp(b * x)
+
+# Defining the function that takes the data as an input, plots, curve-fits, and returns the optimized parameters
+def plotData(x = [], y = [], TITLE = "Exponential Fit of Data"):
+    # input data (x and y values)
+    x_data = x
+    y_data = y
+
+    # Perform curve fitting using scipy's curve_fit function
+    popt, pcov = curve_fit(exp_func, x_data, y_data)
+
+    # Extract the optimal values of parameters a and b
+    a_opt, b_opt = popt
+
+    # Print out the fitted parameters
+    print(f"Fitted parameters: a = {a_opt:.4f}, b = {b_opt:.4f}")
+
+    # Generate fitted y data using the fitted parameters
+    y_fitted = exp_func(x_data, a_opt, b_opt)
+
+    # Plot the original data and the fitted curve
+    plt.figure(figsize=(8, 6))
+    plt.scatter(x_data, y_data, label="Data", color="red", marker="o")  # Plot the raw data
+    plt.plot(x_data, y_fitted, label=f"Fitted Curve: $y = a \\cdot e^{{b \\cdot x}}$, $a = {a_opt:.2f}, b = {b_opt:.2f}$", color="blue", linewidth=2)  # Plot the fitted curve
+
+    # Add labels and title
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.title(TITLE)
+    plt.legend()
+
+    # Show the plot
+    plt.grid(True)
+    plt.show()
+
+    return [a_opt, b_opt]
+
