@@ -123,3 +123,17 @@ print("The best time taken to multiply the second array by the scalar is roughly
 print(arrayMultiplication1(arr1,arr2))
 print("The best time taken to multiply the first array by the second array is roughly: ", tm.timeit(lambda: arrayMultiplication1(arr1,arr2), number = 1000), " sec")
 
+# Function to generate a random matrix of size N
+def randMat(N):
+    """
+    Returns a random square matrix of size N.
+    Parameters:
+    N (integer): The desired size of the array
+    Returns:
+    ndarray: An array of size N
+    """
+    
+    matrix = np.random.rand(N, N) # generates a random matrix of size N with a random value from a uniform distribution (between 0 and 1) for each entry
+    
+    return matrix
+
