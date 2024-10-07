@@ -23,3 +23,7 @@ $$ t = A N^p$$
 
 
 6. Matrix Dot Product using Einstein Summation: $p = 2.1538684855486787 \pm 0.06073369383635453$;  $A = 1.3540215797646266 \times 10^{-10}$
+
+
+7. Matrix Dot Product using for loops: $p = -0.050622328426910654 \pm 0.0975347645791423;  A: 7.8932421200591 \times 10^{-8}$
+(Note: for loop execution time appears nearly constant, however, it is significantly higher than the more prominent exponential algorithms in magnitude)
