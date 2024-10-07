@@ -62,9 +62,6 @@ def arrayMultiplication1(arr1, arr2):
         errmsg = "Incompatible shapes: " + str(e)
         return errmsg
 
-    result = np.einsum(arr2, [Ellipsis], arr1, [Ellipsis])
-    return result
-
     broadcasted_arr2 = np.broadcast_to(arr1,arr2.shape)
 
     result = arr1 * broadcasted_arr2 # instead of arr2
@@ -106,7 +103,7 @@ def arrayMultiplication3(arr1, arr2):
         errmsg = "Incompatible shapes: " + str(e)
         return errmsg
 
-    result = np.einsum(arr2, [Ellipsis], arr1, [Ellipsis])
+    result = np.einsum(arr2, [Ellipsis], arr1, [Ellipsis]) # Default NumPy-style broadcasting is done by adding an ellipsis to the left of each term
     return result
 
 # testing
