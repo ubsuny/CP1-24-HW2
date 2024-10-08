@@ -39,7 +39,7 @@ def axisSummation(arr, axis=None):
     return np.sum(arr, axis=axis)
 
 # Define functions to time the summation for rows and columns
-def sum_array():
+def sum_array(arr):
     """
     Computes the sum of all elements in the array.
     
@@ -48,7 +48,7 @@ def sum_array():
     """
     return axisSummation(arr, axis=None) # Summing all elements in the array
 
-def sum_rows():
+def sum_rows(arr):
     """
     Computes the sum of elements along each row of the array.
     
@@ -57,7 +57,7 @@ def sum_rows():
     """
     return axisSummation(arr, axis=1)  # Summing along rows (axis=1)
 
-def sum_columns():
+def sum_columns(arr):
     """
     Computes the sum of elements along each column of the array.
     
