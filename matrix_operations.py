@@ -39,7 +39,7 @@ def axisSummation(arr, axis=None):
     return np.sum(arr, axis=axis)
 
 # Define functions to time the summation for rows and columns
-def sum_array():
+def sum_array(arr):
     """
     Computes the sum of all elements in the array.
     
@@ -48,7 +48,7 @@ def sum_array():
     """
     return axisSummation(arr, axis=None) # Summing all elements in the array
 
-def sum_rows():
+def sum_rows(arr):
     """
     Computes the sum of elements along each row of the array.
     
@@ -57,7 +57,7 @@ def sum_rows():
     """
     return axisSummation(arr, axis=1)  # Summing along rows (axis=1)
 
-def sum_columns():
+def sum_columns(arr):
     """
     Computes the sum of elements along each column of the array.
     
@@ -154,7 +154,6 @@ def get_diagonal_numpy(matrix):
 # TODO: Implement operation 2: axis_summation()
 # Computes the summation along specified axes
 
-
 # Performs the transposition of an array
 def get_transpose(matrix):
     """
@@ -178,10 +177,35 @@ def get_transpose(matrix):
     # uses the numpy method to return the transpose of a matrix
     return np.transpose(matrix)
 
-
-# TODO: Implement operation 4: purmute_axes()
 # Permutes the axes of an array
+def get_permutations(matrix):
+    """
+    Returns an array with axes transposed.
 
+    For a 1-D array, this returns an unchanged view of the original array, as a 
+    transposed vector is simply the same vector. To convert a 1-D array into a 2-D 
+    column vector, an additional dimension must be added, e.g., 
+    np.atleast_2d(a).T achieves this, as does a[:, np.newaxis]. For a 2-D array, 
+    this is the standard matrix transpose. For an n-D array, if axes are given, their 
+    order indicates how the axes are permuted (see Examples). If axes are not 
+    provided, then transpose(a).shape == a.shape[::-1].
+
+    Parameters:
+    a : array_like
+        Input array.
+    axes : tuple or list of ints, optional
+        If specified, it must be a tuple or list which contains a permutation of 
+        [0,1,…,N-1] where N is the number of axes of a. The i’th axis of the 
+        returned array will correspond to the axis numbered axes[i] of the 
+        input. If not specified, defaults to range(a.ndim)[::-1], which 
+        reverses the order of the axes.
+
+    Returns:
+    p : ndarray
+        a with its axes permuted. A view is returned whenever possible.
+    """
+    # uses the numpy method to return the axes transpose of a matrix
+    return np.permute_dims(matrix)
 
 # TODO: Implement operation 5: matrix_multiplication() and dot_product()
 # Computes matrix multiplication and dot products
