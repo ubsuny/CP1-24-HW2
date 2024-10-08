@@ -1,7 +1,7 @@
 # Matrix Multiplication and Dot Product Execution time
 
-We compare the execution time for implementing Matrix Multiplication and Dot Product operations using different Pyhton algorithms with Einstein Summation. 
-The reults thus obtained are provided in form of an exponential reltionship between execution time and matrix size ($N \times N$) as follows:
+We compare the execution time for implementing Matrix Multiplication and Dot Product operations using different Python algorithms with the Einstein Summation convention. 
+The results thus obtained are provided in the form of an exponential relationship between execution time and matrix size ($N \times N$) as follows:
 
 The computation time ($t$) is related to matrix size ($N$) as:
 
