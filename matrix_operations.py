@@ -178,7 +178,7 @@ def get_transpose(matrix):
     return np.transpose(matrix)
 
 # Permutes the axes of an array
-def get_permutations():
+def get_permutations(matrix):
     """
     Returns an array with axes transposed.
 
@@ -205,6 +205,7 @@ def get_permutations():
         a with its axes permuted. A view is returned whenever possible.
     """
     # uses the numpy method to return the axes transpose of a matrix
+    return np.permute_dims(matrix)
 
 # TODO: Implement operation 5: matrix_multiplication() and dot_product()
 # Computes matrix multiplication and dot products
