@@ -13,7 +13,7 @@ This directly affects our project since we're timing how long certain matrix ope
 There are several methods we may implement to mitigate the impact of garbage collection. 
 
 1. Disabling garbage collection 
-- We can diable garbage collection entirely during the runtime of our operations using something like
+- We can disable garbage collection entirely during the runtime of our operations using something like
 ```Python
 import gc
 
